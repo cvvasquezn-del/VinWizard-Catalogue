@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00303c">
+  <meta name="description" content="Explore the VinWizard solutions catalogue. Winery temperature control, automation, energy management and CellarView in an interactive book.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="VinWizard — Solutions catalogue">
+  <meta property="og:description" content="One cellar. Connected. Explore winery control and automation with VinWizard.">
+  <meta property="og:type" content="website">
+  <title>VinWizard — Solutions catalogue</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/poppins-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#viewport">Skip to catalogue</a>
+  <header class="viewer-header">
+    <a class="viewer-brand" href="#page=1" data-page="0" aria-label="VinWizard catalogue cover"><img src="assets/vinwizard-logo-v3.webp" alt="VinWizard"></a>
+    <div class="viewer-title"><strong>Solutions catalogue</strong><span>Winery control & automation</span></div>
+    <div class="viewer-actions"><button id="contents-button" class="tool-button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg><span>Contents</span></button><button id="reading-button" class="tool-button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v18H4zM8 8h8M8 12h8M8 16h5"/></svg><span>Read</span></button><button id="share-button" class="tool-button" title="Copy a link to this page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12 15 6M9 12l6 6"/><circle cx="5" cy="12" r="3"/><circle cx="18" cy="4" r="3"/><circle cx="18" cy="20" r="3"/></svg><span>Share</span></button><button id="fullscreen-button" class="tool-button" title="Toggle fullscreen" aria-label="Toggle fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></svg></button></div>
+  </header>
+  <main id="viewport" class="viewport" tabindex="-1" aria-label="Catalogue viewer">
+    <div class="book-area" id="book-area"><div class="book-frame" id="book-frame"><div class="book" id="book">{{PAGES}}</div></div></div>
+    <div id="reader" class="reader" hidden></div>
+    <noscript><div class="noscript-note">JavaScript is off. All catalogue pages are shown below.</div></noscript>
+  </main>
+  <footer class="viewer-footer">
+    <span class="edition">English / Review edition</span>
+    <div class="pagination"><button id="previous-button" class="page-arrow" aria-label="Previous pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><button id="page-counter" class="page-counter" aria-haspopup="dialog">1 / 16</button><button id="next-button" class="page-arrow" aria-label="Next pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div>
+    <div class="footer-tools"><button id="zoom-button" class="quiet-button">Zoom +</button><button id="print-button" class="quiet-button" title="Open your browser’s A4 print dialog">Print</button></div>
+    <div class="progress-track" aria-hidden="true"><div id="progress-fill"></div></div>
+  </footer>
+  <p id="live-status" class="sr-only" role="status" aria-live="polite"></p>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="contents-dialog" class="contents-dialog" aria-labelledby="contents-title"><div class="dialog-heading"><div><h2 id="contents-title">Inside the catalogue</h2><p>Choose a page to explore.</p></div><button class="dialog-close" data-close aria-label="Close contents">×</button></div><div class="chapter-grid">{{CHAPTERS}}</div><p class="dialog-tip">Use ← and → to turn pages. Press Esc to close an enlarged view.</p></dialog>
+  <dialog id="zoom-dialog" class="zoom-dialog" aria-labelledby="zoom-title"><div class="zoom-heading"><h2 id="zoom-title">Page detail</h2><span>Scroll to explore</span><button class="dialog-close" data-close aria-label="Close page detail">×</button></div><div id="zoom-content" class="zoom-content"></div></dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-title"><div class="dialog-heading"><h2 id="image-title">Image detail</h2><button class="dialog-close" data-close aria-label="Close image detail">×</button></div><div class="image-stage"><img id="detail-image" alt=""></div><p id="detail-caption"></p></dialog>
+  <dialog id="share-dialog" class="share-dialog" aria-labelledby="share-title"><div class="dialog-heading"><h2 id="share-title">Share this page</h2><button class="dialog-close" data-close aria-label="Close sharing">×</button></div><p>Copy this link and send it to your team.</p><label for="share-url">Page link</label><input id="share-url" readonly><p class="fine-print">For others to open it, share the link after uploading the catalogue to Netlify.</p></dialog>
+</body>
+</html>

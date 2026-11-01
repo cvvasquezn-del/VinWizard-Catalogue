@@ -1,0 +1,14 @@
+{
+  "name": "vinwizard-catalogue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VinWizard English digital catalogue, with A4 pages and a self-contained book viewer",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && node server.mjs",
+    "preview": "node server.mjs",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" }
+}
