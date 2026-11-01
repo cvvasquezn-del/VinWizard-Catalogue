@@ -55,9 +55,9 @@ npm run build
 
 ## Git
 
-Proyecto separado de la web original. El primer commit conserva el catálogo editable. No se ha publicado en GitHub ni se ha modificado `VinWizard-English`.
+Proyecto separado de la web original. El primer commit conserva el catálogo editable. Repositorio: [VinWizard-Catalogue](https://github.com/cvvasquezn-del/VinWizard-Catalogue). La web `VinWizard-English` se mantiene como proyecto independiente.
 
-Cuando crees el repositorio vacío `VinWizard-Catalogue` en tu GitHub, podrás añadirlo como remoto y subir la rama `main`. Si trabajas después en GitHub, `git pull` trae los cambios al ordenador; `git push` sube tus cambios locales.
+El remoto `origin` apunta al repositorio de GitHub y la rama de trabajo es `main`. `git pull` trae los cambios al ordenador; `git push` sube tus cambios locales.
 
 ## Próxima revisión editorial
 
